@@ -1,0 +1,4 @@
+<% @lists.each do |list|%>
+  <p><%= list.name%></p>
+  <p><%= link_to "show", list_path(list)%></p>
+<% end %>
