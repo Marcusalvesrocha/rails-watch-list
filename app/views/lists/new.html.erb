@@ -1,2 +1,6 @@
 <h1>Lists#new</h1>
 <p>Find me in app/views/lists/new.html.erb</p>
+<%=simple_form_for [@bookmark, @list] do |f|%>
+  <%= f.input :comment %>
+  <%= f.input :movie, collection: Movie.all %>
+<% end %>
