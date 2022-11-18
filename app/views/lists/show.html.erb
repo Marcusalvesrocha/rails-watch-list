@@ -1,1 +1,6 @@
-<%=@list.name%>
+<div class="container">
+  <p><%=@list.name%></p>
+  <%@list.movies.each do |movie|%>
+    <p><%= movie.title%></p>
+  <% end %>
+</div>

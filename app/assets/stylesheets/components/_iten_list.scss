@@ -1,0 +1,20 @@
+.bg-image {
+  //position: relative;
+  justify-content: center;
+  width: 100px;
+  max-width: 200px;
+}
+.bg-image img {
+   /* corresponds to max height of 450px */
+  margin: 0 auto;
+}
+.bg-image p {
+  font-size: 16;
+  //position: absolute;
+  //text-align: center;
+  //bottom: 0;
+  //left: 0;
+  //right: 0;
+  //top: 50;
+  color: white;
+}
