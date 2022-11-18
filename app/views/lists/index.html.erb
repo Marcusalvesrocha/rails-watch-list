@@ -1,10 +1,8 @@
 <div class="container">
   <div class="d-flex justify-content-between mb-3">
-
       <h1>My Lists</h1>
-
       <div>
-      <a href="#" class="btn btn-success">Create a movie list</a>
+        <%= link_to "Create a movie list", new_list_path, class: "btn btn-success"%>
       </div>
   </div>
   <div class="row">
@@ -12,12 +10,8 @@
       <div class="col-4 mb-4">
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png<%#= plant.image_url %>)">
           <%= link_to list.name, list_path(list), class: "text-decoration-none link-light" %>
-
         </div>
       </div>
-
-
     <% end %>
-
   </div>
 </div>

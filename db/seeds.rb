@@ -37,7 +37,7 @@
 #  name: "Marvel"
 #)
 
-l = List.find(3)
+l = List.find(4)
 [Movie.find(1), Movie.find(2)].each do |m|
   bm = Bookmark.new
   bm.comment = "lista #{l.name}"
@@ -47,11 +47,11 @@ l = List.find(3)
 end
 
 
-l = List.find(4)
-[Movie.find(3), Movie.find(4)].each do |m|
-  bm = Bookmark.new
-  bm.comment = "lista #{l.name}"
-  bm.movie = m
-  bm.list = l
-  bm.save
-end
+#l = List.find(4)
+#[Movie.find(3), Movie.find(4)].each do |m|
+#  bm = Bookmark.new
+#  bm.comment = "lista #{l.name}"
+#  bm.movie = m
+#  bm.list = l
+#  bm.save
+#end

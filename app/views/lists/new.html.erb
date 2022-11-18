@@ -1,6 +1,12 @@
-<h1>Lists#new</h1>
-<p>Find me in app/views/lists/new.html.erb</p>
-<%=simple_form_for [@bookmark, @list] do |f|%>
-  <%= f.input :comment %>
-  <%= f.input :movie, collection: Movie.all %>
-<% end %>
+<div class="container">
+<h1>New List</h1>
+  <div class="row justify-content-center">
+    <%=simple_form_for @list do |f|%>
+      <div class="col-6">
+      <%= f.input :name %>
+      </div>
+      <%#= f.input :movie, collection: Movie.all %>
+      <%= f.submit%>
+    <% end %>
+  </div>
+</div>

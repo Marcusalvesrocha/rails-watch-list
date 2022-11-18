@@ -1,6 +1,27 @@
 <div class="container">
-  <p><%=@list.name%></p>
-  <%@list.movies.each do |movie|%>
-    <p><%= movie.title%></p>
-  <% end %>
+  <div class="d-flex justify-content-between mb-3">
+
+      <h1><%=@list.name%></h1>
+
+      <div>
+      <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-success"%>
+      </div>
+  </div>
+  <h1></h1>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <%@list.bookmarks.each do |bm|%>
+      <div class="col">
+        <div class="card">
+          <img src="<%= bm.movie.poster_url%>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><strong><%= bm.movie.title%></strong></h5>
+            <p class="card-text"><%= bm.movie.overview%></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><%= bm.comment%></small>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
